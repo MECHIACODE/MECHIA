@@ -1,9 +1,4 @@
-<p align="center">
-<picture>
-  
-    <img src="Pic/Mechia banner.png" style="width: 70%; height: 40%;" alt="Rig logo">
-</picture>
-<br>
+
 
 # MECHIA - Your AI Mechanical Engineer
 
