@@ -1,4 +1,4 @@
-![Mechia Banner](./Pic/mechia_banner.png)
+![Mechia Banner](./Pic/Mechia_banner.png)
 
 
 # MECHIA - Your AI Mechanical Engineer
