@@ -16,7 +16,7 @@ Welcome to **MECHIA**, an advanced AI agent designed to solve complex mechanical
 ### 🔍 **Static, Cinematic, and Dynamic Analysis**
 MECHIA provides robust tools to analyze mechanical systems, offering:
 - Comprehensive static force calculations.
-- Kinematic chain analysis for motion studies.
+- Cinematic chain analysis for motion studies.
 - Dynamic simulations to evaluate system behavior.
 
 ### 🛠️ **Technical Question Assistance**
@@ -28,39 +28,50 @@ Ask MECHIA technical questions, and receive:
 Transform your 2D mechanical blueprints into:
 - 3D models in STEP file format.
 - Ready-to-use designs for CAD applications.
-
+---
+## Contributing
+We welcome contributions! To contribute:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Submit a pull request.
 ---
 
-## Getting Started
-
-### Prerequisites
-To run MECHIA, ensure you have:
-- **Python 3.8+**
-- Required Python libraries (see [requirements.txt](https://github.com/MECHIACODE/MECHIA/blob/main/requirements.txt))
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MECHIACODE/MECHIA.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd MECHIA
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Usage
-Run MECHIA with:
+## Get Started
 ```bash
-python mechia.py
+cargo add mechia-core
 ```
-Follow the prompts to input your requirements and receive results.
 
+### Simple example:
+```rust
+use mechia::{completion::Prompt, providers::openai};
+
+#[tokio::main]
+async fn main() {
+    // Create OpenAI client and model
+    // This requires the `OPENAI_API_KEY` environment variable to be set.
+    let openai_client = openai::Client::from_env();
+
+    let gpt4 = openai_client.agent("gpt-4").build();
+
+    // Prompt the model and print its response
+    let response = gpt4
+        .prompt("Who are you?")
+        .await
+        .expect("Failed to prompt GPT-4");
+
+    println!("GPT-4: {response}");
+}
+```
+Note using `#[tokio::main]` requires you enable tokio's `macros` and `rt-multi-thread` features
+or just `full` to enable all features (`cargo add tokio --features macros,rt-multi-thread`).
+
+## Supported Integrations
+
+Vector stores are available as separate companion-crates:
+
+- LanceDB vector store: [`mechia-lancedb`](https://github.com/mechiacode/mechia/tree/main/mechia-lancedb)
 ---
-
 ## Examples
 
 ### Static Analysis Example
@@ -74,39 +85,22 @@ Reaction forces at supports:
 - Left support: 25N
 - Right support: 25N
 ```
-
+---
 ### 2D to 3D Transformation Example
 Input:
 - A 2D DXF file of a mechanical part.
 Output:
 - A 3D STEP file of the part, ready for CAD.
-
 ---
-
-## Contributing
-We welcome contributions! To contribute:
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push the branch.
-4. Submit a pull request.
-
----
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/MECHIACODE/MECHIA/blob/main/LICENSE) file for details.
-
----
-
 ## Contact
 For inquiries or support, reach out via:
 - GitHub Issues: [Submit an issue](https://github.com/MECHIACODE/MECHIA/issues)
-- Email: mechiasupport@example.com
+- Email: contact@mechia.fun
+---
+ ## License
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/MECHIACODE/MECHIA/blob/main/LICENSE) file for details.
 
 ---
-
 ## Stay Updated
 - Follow the repository to get the latest updates and features.
 
----
-
-Thank you for choosing MECHIA, the AI-driven mechanical engineering assistant!
