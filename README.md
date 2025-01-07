@@ -1,10 +1,15 @@
-![MECHIA Banner](pic/Mechia banner.png)
+<p align="center">
+<picture>
+  
+    <img src="Pic/Mechia banner.png" style="width: 70%; height: 40%;" alt="Rig logo">
+</picture>
+<br>
 
 # MECHIA - Your AI Mechanical Engineer
 
 Welcome to **MECHIA**, an advanced AI agent designed to solve complex mechanical problems with precision and efficiency. MECHIA is your trusted partner for:
 
-- **Static, Kinematic, and Dynamic Analysis**: Perform detailed studies and analysis for mechanical systems.
+- **Static, Cinematic, and Dynamic Analysis**: Perform detailed studies and analysis for mechanical systems.
 - **Technical Q&A**: Get precise answers to technical mechanical questions.
 - **2D to 3D Transformations**: Convert 2D mechanical designs into 3D STEP files with ease.
 
@@ -12,7 +17,7 @@ Welcome to **MECHIA**, an advanced AI agent designed to solve complex mechanical
 
 ## Features
 
-### 🔍 **Static, Kinematic, and Dynamic Analysis**
+### 🔍 **Static, Cinematic, and Dynamic Analysis**
 MECHIA provides robust tools to analyze mechanical systems, offering:
 - Comprehensive static force calculations.
 - Kinematic chain analysis for motion studies.
